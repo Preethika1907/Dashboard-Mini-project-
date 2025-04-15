@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+        }
+        /*sidebar-styling*/
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            background-color: #111827;
+            color: white;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a i {
+            margin-right: 15px;
+        }
+        .sidebar a:hover {
+            background-color: #374151;
+        }
+        @media(max-width: 768px)
+        {
+            .sidebar{
+                width: 150px;
+            }
+            .sidebar a{
+                text-align: center;
+                padding: 10px;
+            }
+            .sidebar a i{
+                margin-right: 0;
+            }
+        }
+        /*content-section*/
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        @media(max-width: 768px){
+            .content{
+                margin-left: 80px;
+            }
+            .topbar{
+                margin-left: 50px;
+                position: relative;
+            }
+        }
+        /*topbar-section*/
+        .topbar {
+            background: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            width: 300px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /*Dashboard cards*/
+        .dashboard-cards .card {
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media(max-width: 768px){
+            .dashboard-cards{
+                margin-left: 40px;
+                text-align: center;
+                position: relative;
+            }
+            .table-responsive{
+                margin-left: 50px;
+            }
+        }
+        .table-responsive{
+            overflow-x: auto;
+        }
+        .table img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        @media(max-width: 768px){
+            body{
+                font-size: 16px;
+            }
+        }
+        @media(max-width: 480px){
+            body{
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Sidebars-->
+    <div class="sidebar">
+        <h3 class="text-center">V-Dashboard</h3>
+        <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-layer-group"></i> UI Elements</a>
+        <a href="#"><i class="fas fa-table"></i> Tables</a>
+        <a href="#"><i class="fas fa-edit"></i> Forms</a>
+        <a href="#"><i class="fas fa-id-card"></i> Cards</a>
+        <a href="#"><i class="fas fa-window-maximize"></i> Modal</a>
+    </div>
+    <!--content-->
+    <div class="content">
+        <div class="topbar">
+            <h2>Dashboard</h2>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <!--dashboard cards-->
+        <div class="row dashboard-cards mt-4">
+            <div class="col-md-4">
+                <div class="card p-3 shadow">
+                    <h5><i class="fas fa-user"></i> 8,282</h5>
+                    <p>New Users</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 shadow">
+                    <h5><i class="fas fa-shopping-cart"></i> 200,521</h5>
+                    <p>Total Orders</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 shadow">
+                    <h5><i class="fas fa-box"></i> 215,542</h5>
+                    <p>Available Products</p>
+                </div>
+            </div>
+        </div>
+        <!--tables-->
+        <div class="table-responsive mt-4">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Row1-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row2-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row3-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row4-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row5-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row6-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row7-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row8-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                    <!--Row9-->
+                    <tr>
+                        <td><img src="https://via.placeholder.com/40" alt="Profile"> John Doe<br>john@example.com</td>
+                        <td>Software Engineer<br>Web dev</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Owner</td>
+                        <td><a href="#" class="text-primary">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
